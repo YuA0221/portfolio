@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Spicy+Rice&display&family=Dela+Gothic+One&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico?v=2" sizes="any" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Webデザイナー ポートフォリオ | Yu Aono</title>
+</head>
+
+<body>
+  <!-- Loading -->
+  <div class="loading" id="loading" aria-hidden="true">
+    <div class="ring">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <circle class="track" cx="60" cy="60" r="50"></circle>
+        <circle class="progress" cx="60" cy="60" r="50"></circle>
+      </svg>
+
+      <div class="percent" aria-live="polite">
+        <div><span id="percentValue">0</span><small>%</small></div>
+      </div>
+    </div>
+
+    <div class="loadingText" aria-label="loading">
+      <span style="--i: 0">l</span>
+      <span style="--i: 1">o</span>
+      <span style="--i: 2">a</span>
+      <span style="--i: 3">d</span>
+      <span style="--i: 4">i</span>
+      <span style="--i: 5">n</span>
+      <span style="--i: 6">g</span>
+    </div>
+  </div>
+  <!-- Title Screen（追加） -->
+  <div class="title-screen" id="titleScreen" aria-hidden="true">
+    <div class="title-screen__stage" id="titleStage"></div>
+  </div>
+  <!-- 本編 -->
+  <!-- 縦並び30:70の構成にするためwrapperで括る -->
+  <div class="wrapper" id="wrapper">
+    <aside class="sideBar">
+      <!-- SP表示の時に横並びにするためflexにする -->
+      <div class="profile">
+        <div class="profile-head">
+          <img src="img/logo_bird_1.svg" class="logo" />
+          <p class="my-name">Yu Aono</p>
+        </div>
+        <div class="job">
+          <p class="job-title">Web / UI / UX Designer</p>
+          <p class="job-sub">(Design & Coding)</p>
+        </div>
+        <div class="my-photo">
+          <!-- ここに写真が入ります（現状仮置き） -->
+          <img src="profile_photo.jpeg" alt="仮置き" />
+        </div>
+        <!-- スキルアイコンリスト -->
+        <div class="skills">
+          <h3 class="skill-title">Skills</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <img class="skill-icon" src="img/html5-brands-solid-full.svg" alt="HTML" />
+            </li>
+            <li class="skill-item">
+              <img class="skill-icon" src="img/css3-alt-brands-solid-full.svg" alt="CSS" />
+            </li>
+            <li class="skill-item">
+              <img class="skill-icon" src="img/js-brands-solid-full.svg" alt="JavaScript" />
+            </li>
+            <li class="skill-item">
+              <img class="skill-icon" src="img/Figma_logo.svg" alt="Figma" />
+            </li>
+            <li class="skill-item">
+              <img class="skill-icon" src="img/Ai_icon.svg" alt="Illustrator" />
+            </li>
+            <li class="skill-item">
+              <img class="skill-icon" src="img/Ps_icon.svg" alt="Photoshop" />
+            </li>
+            <li class="skill-item wp">
+              <img class="skill-icon" src="img/WordPress W Mark.svg" alt="WordPress" />
+            </li>
+          </ul>
+          <p class="skill-note">
+            ※ 表示しているロゴ・アイコンは、使用ツールを示すためのものです。
+          </p>
+        </div>
+      </div>
+      <nav class="page-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-link">
+            <a href="index.html">
+              <span class="nav-text">Top</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#about">
+              <span class="nav-text">About</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#works">
+              <span class="nav-text">Works</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#contact">
+              <span class="nav-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section class="mv" id="mv">
+        <div class="mv-inner">
+          <h1 class="mv-title" id="mvTitle">
+            <span>Yu Aono's</span>
+            <span>Portfolio</span>
+          </h1>
+        </div>
+      </section>
+      <div class="main-inner">
+        <section class="about-sec" id="about">
+          <h2 class="aboutMe">
+            <span lang="en">ABOUT</span>
+            <span class="jp">私について</span>
+          </h2>
+          <div class="about-copy">
+            <p>
+              Webデザイナーとして、ヒアリングから情報設計、UIデザイン、
+              HTML/CSS/JavaScriptを用いたコーディングまで一貫して対応しています。
+            </p>
+
+            <p>
+              見た目の美しさだけでなく、「伝わる・使いやすい・成果につながる」Webサイト制作を大切にしています。
+            </p>
+
+            <p>
+              個人のポートフォリオサイトやブログ、企業のコーポレートサイトまで、
+              目的やターゲットに合わせた設計で、レスポンシブ対応・WordPress構築にも対応可能です。
+              丁寧なヒアリングを通して課題を整理し、長く運用できるWebサイトを制作します。
+            </p>
+          </div>
+          <ul class="about-flow">
+            <li class="flow-item">
+              <div class="flow-head">
+                <span class="flow-num">01</span>
+                <h3 class="flow-title">Planning</h3>
+              </div>
+              <p class="flow-text">
+                ヒアリングを通して課題や目的を整理し、情報設計を行います。
+              </p>
+            </li>
+
+            <li class="flow-item">
+              <div class="flow-head">
+                <span class="flow-num">02</span>
+                <h3 class="flow-title">Design</h3>
+              </div>
+              <p class="flow-text">
+                ユーザー視点を重視したUIデザイン・ワイヤーフレームを作成します。
+              </p>
+            </li>
+
+            <li class="flow-item">
+              <div class="flow-head">
+                <span class="flow-num">03</span>
+                <h3 class="flow-title">Development</h3>
+              </div>
+              <p class="flow-text">
+                保守性を意識したHTML/CSS/JavaScriptによるコーディングと、
+                WordPressを用いた更新しやすいサイト構築を行います。
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="works-sec" id="works">
+          <h2 class="work">
+            <span lang="en">WORKS</span>
+            <span class="jp">作品一覧</span>
+          </h2>
+
+          <!-- Works内ナビ -->
+          <nav class="works-nav" aria-label="Works category navigation">
+            <ul class="works-nav-list">
+              <li><a href="#website">Website</a></li>
+              <li><a href="#banner">Banner</a></li>
+              <li><a href="#flyer">Flyer</a></li>
+              <li><a href="#design">Design</a></li>
+            </ul>
+          </nav>
+
+          <!-- WebSite -->
+          <h3 class="website" id="website">Web site</h3>
+          <ul class="works-grid web-grid">
+            <li class="work-card">
+              <a href="#" role="button" class="work-link js-work-open" data-title="Portfolio"
+                data-tools="HTML / CSS / JavaScript / ChatGPT / Illustrator" data-pc="img/works/portfolio.webp"
+                data-sp="img/works/portfolio_sp.webp" data-desc="" data-points="">
+                <div class="work-thumb">
+                  <img src="img/works/portfolio_pc.webp" alt="ポートフォリオサイト制作" />
+                </div>
+                <div class="work-info">
+                  <h4 class="work-title">ポートフォリオ | Yu Aono</h4>
+                  <p class="tools">
+                    HTML / CSS / JavaScript / ChatGPT / Illustrator
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a href="#" role="button" class="work-link js-work-open" data-title="Guilty Cotton"
+                data-tools="HTML / CSS / JavaScript / ChatGPT / Illustrator / Figma"
+                data-pc="img/works/guilty_cotton_website.png" data-sp="img/works/guilty_cotton_SP.webp"
+                data-desc="和モダン×世界観を重視したブランドサイト。FVスライダー・タブ・導線設計を意識して制作しました。"
+                data-points="店舗の外観、メニュー、コンセプトなど全てを自身で設定|タブUIによる情報整理と回遊性向上|FVスライダーのUI/余白調整|更新しやすいセクション設計">
+                <div class="work-thumb">
+                  <img src="img/works/guilty_cotton_website.png" alt="架空アイスクリームサイト制作" />
+                </div>
+                <div class="work-info">
+                  <h4 class="work-title">Guilty Cotton</h4>
+                  <p class="tools">
+                    HTML / CSS / JavaScript / ChatGPT / Illustrator / Figma
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <!-- banner -->
+          <h3 class="banner" id="banner">Banner</h3>
+          <ul class="works-grid sub-grid">
+            <li class="work-card">
+              <a href="#" role="button" class="work-link js-work-open" data-title="(架空)チキン南蛮バナー"
+                data-tools="Illustrator / Photoshop / Gemini" data-pc="img/works/chicken nanban_banner.jpg" data-sp=""
+                data-desc="新商品の訴求を目的とした販促バナー制作。商品のボリューム感と“期間限定感”を強調し、視認性とインパクトを意識した構成でデザインしました。"
+                data-points="商品のシズル感を最大限に引き出す色調補正設計|文字のジャンプ率を意識したメリハリ構成|期間限定要素を強調する視線誘導レイアウト設計|食べ盛りの男性をターゲットにした食欲を喚起する配色設計">
+                <div class="work-thumb">
+                  <img src="img/works/chicken nanban_banner.jpg" alt="架空チキン南蛮バナー制作" />
+                </div>
+                <div class="work-info">
+                  <h4 class="work-title">
+                    <span>(架空)</span>
+                    <span>チキン南蛮バナー</span>
+                  </h4>
+                  <p class="tools">Illustrator / Photoshop / Gemini</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a href="#" role="button" class="work-link js-work-open" data-title="(架空)ストロベリーフラペチーノ新商品バナー"
+                data-tools="Illustrator / Photoshop" data-pc="img/works/strawberry_banner.jpg" data-sp=""
+                data-desc="春の新商品を訴求するストロベリーフラペチーノのビジュアルバナー。女性ターゲットを意識したピンクを基調とした華やかな配色と、写真のシズル感を活かしたレイアウト設計で季節感と限定感を演出しました。"
+                data-points="背景の粒子表現による高級感・特別感の演出|商品を中央に配置した安定感のある視線誘導構成|赤×ピンクのグラデーションによる感情訴求カラー戦略|SNS広告を想定した縮小時の可読性対策">
+                <div class="work-thumb">
+                  <img src="img/works/strawberry_banner.jpg" alt="架空ストロベリーフラペチーノ新商品バナー制作" />
+                </div>
+                <div class="work-info">
+                  <h4 class="work-title">
+                    <span>(架空)</span>
+                    <span>ストロベリーフラペチーノ</span>
+                    <span>新商品バナー</span>
+                  </h4>
+                  <p class="tools">Illustrator / Photoshop</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a href="#" role="button" class="work-link js-work-open" data-title="(架空)チキン南蛮長方形バナー"
+                data-tools="Illustrator / Photoshop / Gemini" data-pc="img/works/long_square_banner.jpg" data-sp=""
+                data-desc="横長フォーマットを活かし、商品写真の迫力を最大限に引き出した販促バナー。スマートフォン広告やWeb掲載を想定し、横長フォーマットに最適化したレイアウトで視線誘導と情報整理を行いました。"
+                data-points="横長構図を活かしたZ型視線誘導レイアウト設計|オレンジ×赤を基調とした食欲増進カラー戦略|CTAエリアを想定した余白バランス調整|スクロール途中で目に入ることを意識した視認性調整">
+                <div class="work-thumb">
+                  <img src="img/works/long_square_banner.jpg" alt="架空チキン南蛮販促バナー デザイン自主制作" />
+                </div>
+                <div class="work-info">
+                  <h4 class="work-title">
+                    <span>(架空)</span>
+                    <span>チキン南蛮</span>
+                    <span>長方形バナー</span>
+                  </h4>
+                  <p class="tools">Illustrator / Photoshop / Gemini</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <!-- flyer -->
+          <h3 class="flyer" id="flyer">Flyer</h3>
+          <ul class="works-grid sub-grid">
+            <li class="work-card">
+              <a href="#" role="button" class="work-link js-work-open" data-title="ハロートレーニング公募チラシ１案" data-tools="Canva"
+                data-pc="img/works/flyer1.png" data-sp=""
+                data-desc="公共性の高い広報物として、白黒印刷環境でも視認性が保たれるデザイン設計を実施。短時間で情報の全体像が伝わる構成と、読みやすさを重視したレイアウトを意識しました。同一課題に対し「情報整理型」「印象差別化型」「親しみやすさ重視型」の3方向からアプローチしました。"
+                data-points="白黒印刷を想定したコントラスト重視の配色設計|短時間で目に留まる視線誘導を意識したレイアウト構成|見出しを明確に配置し情報探索性を高める階層設計|縦型メッセージと横型詳細情報の対比による構成演出|キャラクターを控えめに使用し堅い印象を和らげる視覚設計">
+                <div class="work-thumb">
+                  <img src="img/works/flyer1.png" alt="ハローワーク公募チラシ制作" />
+                </div>
+                <div class="work-info">
+                  <h4 class="work-title">
+                    <span>ハロートレーニング</span>
+                    <span>公募チラシ１案</span>
+                  </h4>
+                  <p class="tools">Canva</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a href="#" role="button" class="work-link js-work-open" data-title="ハロートレーニング公募チラシ２案" data-tools="Canva"
+                data-pc="img/works/flyer2.png" data-sp=""
+                data-desc="公共機関の広報物に多い堅い印象から脱却し、アンティークテイストを取り入れることで記憶に残るデザインを目指しました。白黒印刷でも世界観が崩れない設計を意識しています。同一課題に対し「情報整理型」「印象差別化型」「親しみやすさ重視型」の3方向からアプローチしました。"
+                data-points="見出しを活用した情報探索性向上の階層構造設計|公共チラシとの差別化を図るアンティークテイスト設計|装飾要素を活用した印象形成重視のビジュアル構成|モノクロ印刷でも世界観が保たれるトーンバランス設計">
+                <div class="work-thumb">
+                  <img src="img/works/flyer2.png" alt="ハローワーク公募チラシ制作" />
+                </div>
+                <div class="work-info">
+                  <h4 class="work-title">
+                    <span>ハロートレーニング</span>
+                    <span>公募チラシ２案</span>
+                  </h4>
+                  <p class="tools">Canva</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a href="#" role="button" class="work-link js-work-open" data-title="ハロートレーニング公募チラシ３案" data-tools="Canva"
+                data-pc="img/works/flyer3.png" data-sp=""
+                data-desc="公共機関の堅いイメージを和らげることを目的に、明るく軽やかな印象のデザインにアプローチ。他案とは異なるPOPテイストを採用し、親しみやすさと視認性を両立させたデザインを目指しました。白黒印刷を前提にしながらも、背景処理によって単調にならない構成を意識しました。同一課題に対し「情報整理型」「印象差別化型」「親しみやすさ重視型」の3方向からアプローチしました。"
+                data-points="親しみやすさを重視した明快なタイポグラフィ設計|他案と差別化を図るPOPテイスト設計|ハニカム柄背景による単調さ回避と視覚的リズム設計|背景処理により白黒印刷時の余白バランスを最適化">
+                <div class="work-thumb">
+                  <img src="img/works/flyer3.png" alt="ハローワーク公募チラシ制作" />
+                </div>
+                <div class="work-info">
+                  <h4 class="work-title">
+                    <span>ハロートレーニング</span>
+                    <span>公募チラシ３案</span>
+                  </h4>
+                  <p class="tools">Canva</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <!-- design -->
+          <h3 class="design" id="design">Design</h3>
+          <ul class="works-grid sub-grid">
+            <li class="work-card">
+              <a href="#" role="button" class="work-link js-work-open" data-title="(架空)白波珈琲焙煎所ロゴ"
+                data-tools="Illustrator" data-pc="img/works/coffee_logo.webp" data-sp=""
+                data-desc="「白波」という店名から連想される海のイメージを軸に構成したロゴデザイン。波・山・空・かもめといった自然モチーフを抽象化し、線と図形のみで簡潔に表現しました。シンプルながら印象に残るシンボル設計を目指しました。"
+                data-points="「白波」から連想される自然風景を抽象化した構成設計|線の変形を活用した有機的で柔らかなフォルム設計|モノクロ展開でも成立するシルエット重視の構成|店名フォントに丸みを持たせ、親しみやすさを演出|アイコン単体でも使用可能なシンボル設計">
+                <div class="work-thumb design-thumb">
+                  <img src="img/works/coffee_logo.webp" alt="架空コーヒーショップロゴ制作" />
+                </div>
+                <div class="work-info">
+                  <h4 class="work-title">
+                    <span>(架空)</span>
+                    <span>白波珈琲焙煎所ロゴ</span>
+                  </h4>
+                  <p class="tools">Illustrator</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a href="#" role="button" class="work-link js-work-open" data-title="Illustratorオリジナルロゴ"
+                data-tools="Illustrator" data-pc="img/works/Ai_icon.webp" data-sp=""
+                data-desc="Adobe Illustratorの公式ロゴに依存せず、オリジナルとして成立する「Ai」ロゴを制作。図形変形による独自構成で、視認性とオリジナリティの両立を目指しました。既存ロゴとの差別化を図りながらも、ツールとしての認知性を損なわない設計を意識しました。"
+                data-points="既存公式ロゴと印象が重ならない独自造形設計|「Ai」と認識できる可読性を維持した抽象化バランス設計|図形変形を活用した幾何学的フォルム構築|モノクロ展開でも成立するシルエット重視設計">
+                <div class="work-thumb design-thumb">
+                  <img src="img/works/Ai_icon.webp" alt="イラストレーターポートフォリオ用ロゴ制作" />
+                </div>
+                <div class="work-info">
+                  <h4 class="work-title">
+                    <span>Illustrator</span>
+                    <span>オリジナルロゴ</span>
+                  </h4>
+                  <p class="tools">Illustrator</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-card">
+              <a href="#" role="button" class="work-link js-work-open" data-title="R.E.P.O.オリジナルロゴ"
+                data-tools="Illustrator" data-pc="img/works/REPO_logo.png" data-sp=""
+                data-desc="ゲーム内ビジュアルに頼らず単体でも成立するタイトルロゴを目指し制作。ゲーム性を反映した破壊的演出と、視認性の両立を設計の軸としました。また、視覚的なインパクトを持たせながらも、YouTubeサムネイルなど縮小表示時でも認識できる可読性を重視しました。"
+                data-points="公式ロゴに依存しない独自構成によるタイトル設計|「.」をキャラクター化しゲーム性を象徴的に表現|アルファベットをランダムに破壊・変形させた動的構成設計|可読性を損なわない範囲での崩しバランス調整|ゲーム世界観に合わせたカラーリング設計">
+                <div class="work-thumb design-thumb">
+                  <img src="img/works/REPO_logo.png" alt="R.E.P.O.ゲームタイトルロゴ自主制作" />
+                </div>
+                <div class="work-info">
+                  <h4 class="work-title">
+                    <span>R.E.P.O.</span>
+                    <span>オリジナルロゴ</span>
+                  </h4>
+                  <p class="tools">Illustrator</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="works-more">
+            <a href="works.html" class="btn-more">
+              <span class="btn-more__text">View All Works</span>
+              <span class="btn-more__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="contact-sec" id="contact">
+          <div class="sec-head">
+            <h2 class="sec-title">CONTACT</h2>
+            <p class="sec-subtitle">お問い合わせ</p>
+          </div>
+          <div class="contact-inner">
+            <p class="contact-lead">
+              ご相談・お見積もり・制作のご質問など、お気軽にご連絡ください。<br />
+              原則 <strong>3営業日以内</strong> に返信いたします。
+            </p>
+            <div class="contact-cta">
+              <a href="https://forms.gle/zHzuhDcGUziJLQeK7" class="btn-more btn-more--contact" target="_blank"
+                rel="noopener noreferrer">
+                <span class="btn-more__text">お問い合わせはこちら</span>
+                <span class="btn-more__arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer-wrap">
+    <!-- 波線の描画 -->
+    <div class="footer-wave">
+      <svg id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+        class="transition duration-300 ease-in-out delay-150">
+        <defs>
+          <lineargradient id="gradient" x1="100%" y1="50%" x2="0%" y2="50%">
+            <stop offset="5%" stop-color="#18448e"></stop>
+            <stop offset="95%" stop-color="#86b3e0"></stop>
+          </lineargradient>
+        </defs>
+        <path
+          d="M 0,500 L 0,187 C 70.29665071770336,226.67464114832538 140.59330143540672,266.34928229665076 234,272 C 327.4066985645933,277.65071770334924 443.92344497607667,249.2775119617225 545,218 C 646.0765550239233,186.7224880382775 731.7129186602872,152.54066985645932 839,127 C 946.2870813397128,101.45933014354067 1075.224880382775,84.55980861244018 1179,96 C 1282.775119617225,107.44019138755982 1361.3875598086124,147.2200956937799 1440,187 L 1440,500 L 0,500 Z"
+          stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity=".9"
+          class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 250)"></path>
+      </svg>
+    </div>
+    <p class="footer-copy"><small>&copy; 2026 Yu Aono</small></p>
+  </footer>
+
+  <!-- Work Modal -->
+  <div class="work-modal" id="workModal" aria-hidden="true">
+    <div class="work-modal__overlay" data-close="overlay"></div>
+
+    <div class="work-modal__panel" role="dialog" aria-modal="true" aria-labelledby="workModalTitle">
+      <div class="work-modal__inner">
+        <button class="work-modal__close" type="button" aria-label="Close" data-close="button">
+          ×
+        </button>
+
+        <h3 class="work-modal__title" id="workModalTitle"></h3>
+
+        <!-- 使用ツール -->
+        <div class="work-modal__section">
+          <p class="work-modal__label">Tools</p>
+          <p class="work-modal__tools"></p>
+        </div>
+
+        <!-- 概要 -->
+        <div class="work-modal__section">
+          <p class="work-modal__label">Overview</p>
+          <p class="work-modal__desc"></p>
+        </div>
+
+        <!-- 工夫ポイント -->
+        <div class="work-modal__section">
+          <p class="work-modal__label">Key Points</p>
+          <ul class="work-modal__points"></ul>
+        </div>
+
+        <!-- 画像 -->
+        <div class="work-modal__section">
+          <p class="work-modal__label">Preview</p>
+
+          <div class="work-modal__images">
+            <figure class="work-modal__figure work-modal__figure--pc">
+              <figcaption class="work-modal__cap">PC View</figcaption>
+              <img class="work-modal__img work-modal__img--pc" src="" alt="" />
+            </figure>
+
+            <figure class="work-modal__figure work-modal__figure--sp">
+              <figcaption class="work-modal__cap">SP View</figcaption>
+              <img class="work-modal__img work-modal__img--sp" src="" alt="" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- js -->
+  <script src="js/loading.js"></script>
+  <script src="js/title.js"></script>
+  <script src="js/work_modal.js"></script>
+</body>
+
+</html>
